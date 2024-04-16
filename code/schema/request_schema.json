@@ -1,0 +1,65 @@
+{
+    "_comment": "# Sample file is used to give overview about request_schema ",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "request_schema",
+    "definitions": {
+      "google-search": {
+        "type": "object",
+        "properties": {
+          "command_type": {
+            "type": "string"
+          },
+          "search_term": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "command_type",
+          "search_term"
+        ]
+      }
+    },
+    "type": "object",
+    "properties": {
+      "task": {
+        "type": "object",
+        "properties": {
+          "fbName": {
+            "type": "string",
+            "enum": [
+              "google-search"
+            ]
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "fbName": {
+                  "const": "google-search"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "fbPayload": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "$ref": "#/definitions/google-search"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "required": [
+          "fbName",
+          "fbPayload"
+        ]
+      }
+    },
+    "required": [
+      "task"
+    ]
+  }

@@ -1,0 +1,8 @@
+*.html
+*.xml
+*.txt
+*.png
+*.pyc
+/.vscode/settings.json
+/hooks/node_modules
+/node_modules

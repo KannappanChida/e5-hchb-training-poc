@@ -1,0 +1,26 @@
+[tool]
+
+[tool.poetry]
+authors = ['kannappan <kannappan.chidambaram@e5.ai>']
+description = ''
+name = 'e5-rf-fb-worker-scaffolder'
+readme = 'README.md'
+version = '0.0.1'
+
+[tool.poetry.dependencies]
+e5_rf_fb_worker_core = '0.0.1'
+python = '3.8.16'
+
+[[tool.poetry.source]]
+name = 'jfrog-server'
+url = 'https://element5.jfrog.io/artifactory/api/pypi/e5-rf-fb-worker-core-pypi-local/simple'
+priority = 'supplemental'
+
+[[tool.poetry.source]]
+name = 'default'
+url = 'https://pypi.python.org/simple'
+priority = 'default'
+
+[build-system]
+build-backend = 'poetry.core.masonry.api'
+requires = ['poetry-core']

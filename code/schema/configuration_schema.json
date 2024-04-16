@@ -1,0 +1,23 @@
+{
+    "_comment": "# Sample file is used to give overview about configuration_schema ",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "configuration_schema",
+    "type": "object",
+    "properties": {
+      "APP_URL": {
+        "type": "string"
+      },
+      "APP_USERNAME":{
+        "type": "string"
+      },
+      "APP_PASSWORD":{
+        "type": "string"
+      },
+      "COUNT_FOR_BROWSER_CONTEXT_REFRESH":{
+        "type": "number"
+      }
+    },
+    "required": [
+      "APP_URL"
+    ]
+}

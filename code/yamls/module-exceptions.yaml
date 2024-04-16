@@ -1,0 +1,9 @@
+# module-exceptions.yaml : contains module error codes  and messages
+e5:
+  SUCCESS:
+    code: E5.MODULE.SYSTEM.S0001
+    message: message processed succesfully
+
+  GENERIC_ERROR:
+    code: E5.MODULE.SYSTEM.E0999
+    message: message processing failed

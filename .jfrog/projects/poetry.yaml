@@ -1,0 +1,5 @@
+version: 1
+type: poetry
+resolver:
+  repo: e5-rf-fb-worker-core-pypi-local
+  serverId: e5-rf-fb-worker-core

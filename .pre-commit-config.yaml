@@ -1,0 +1,15 @@
+repos:
+- repo: local
+  hooks:
+    - id: robotidy
+      name: robotidy
+      entry: robotidy .
+      files: '.*\.(robot|resource)$'
+      language: python
+      description: "RobotFramework source code formatter"
+    - id: robocop
+      name: robocop-linter
+      language: system
+      files: '.*\.(robot|resource)$'
+      pass_filenames: false
+      entry: robocop --configure return_status:quality_gate:E=0:W=-1:I=-1 --exclude wrong-case-in-keyword-name --exclude missing-doc-* --ignore section_99\*  --ext-rules e5_rf_fb_worker_core.rules.keyword_rules .
