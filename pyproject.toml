@@ -1,15 +1,30 @@
-[tool]
-
 [tool.poetry]
-authors = ['kannappan <kannappan.chidambaram@e5.ai>']
-description = ''
-name = 'e5-rf-fb-worker-scaffolder'
-readme = 'README.md'
-version = '0.0.1'
+name = "myunity-fb-worker"
+version = "1.0.0"
+description = "robotframework based fb_worker to perform automation in myunity/devero applications"
+authors = ["kannappan <kannappan.chidambaram@e5.ai>"]
+readme = "README.md"
 
 [tool.poetry.dependencies]
-e5_rf_fb_worker_core = '0.0.1'
-python = '3.8.16'
+e5_rf_fb_worker_core = '0.5.0'
+python = "3.8.16"
+robotframework = "5.0.1"
+rpaframework = "23.2.1"
+robotframework-browser = "16.2.0"
+robotframework-datetime-tz = "1.0.6"
+playwright = "1.29.1"
+xvfbwrapper = "0.2.9"
+rpaframework-core="11.2.0"
+rpaframework-recognition="5.1.2"
+robotframework-assertion-engine="2.0.0"
+boto3="1.26.142"
+robotframework-screencaplibrary="1.6.0"
+opencv-python="4.8.0.74"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
 
 [[tool.poetry.source]]
 name = 'jfrog-server'
@@ -20,7 +35,3 @@ priority = 'supplemental'
 name = 'default'
 url = 'https://pypi.python.org/simple'
 priority = 'default'
-
-[build-system]
-build-backend = 'poetry.core.masonry.api'
-requires = ['poetry-core']
